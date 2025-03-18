@@ -1,0 +1,109 @@
+//package SecondPractice;
+//
+//import java.util.List;
+//
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//
+//public class AutoSuggestDropdown9 {
+//
+//	public static void main(String[] args) throws InterruptedException {
+//		// TODO Auto-generated method stub
+//		
+//		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+//        ChromeDriver driver = new ChromeDriver();
+//
+//        // Open the webpage
+//        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+//        
+//        WebElement search=driver.findElement(By.id("autosuggest"));
+//        search.sendKeys("pak");
+//        Thread.sleep(2000);
+//        List<WebElement> elements=driver.findElements(By.className("ui-corner-all"));
+////        driver.find
+//        
+//        for (WebElement element:elements) {
+//        	if (element.getText().contains("Pakistan")){
+//        		element.click();
+//        		break;
+//        	}
+//        }
+//        
+//        
+//
+//	}
+//
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package SecondPractice;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AutoSuggestDropdown9 {
+
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Implicit wait
+
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+
+        WebElement search = driver.findElement(By.id("autosuggest"));
+        search.sendKeys("pak");
+        
+        // Explicit wait for dropdown suggestions to appear
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[class='ui-menu-item'] a")));
+
+        // Get all suggestion elements
+        List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+
+        for (WebElement option : options) {
+            if (option.getText().equalsIgnoreCase("Pakistan")) {
+                option.click();
+                break;
+            }
+        }
+        
+        driver.quit();
+    }
+}

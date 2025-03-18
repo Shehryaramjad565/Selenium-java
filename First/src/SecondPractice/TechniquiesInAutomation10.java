@@ -1,0 +1,21 @@
+package SecondPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class TechniquiesInAutomation10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        
+        driver.get("https://www.speedtest.net/");
+        
+        Actions ac= new Actions(driver);
+        
+        ac.moveToElement(driver.findElement(By.cssSelector(".nav-item-text.language-item"))).build().perform();
+	}
+
+}

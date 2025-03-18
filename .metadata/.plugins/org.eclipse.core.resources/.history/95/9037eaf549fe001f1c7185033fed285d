@@ -1,0 +1,69 @@
+package SecondPractice;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+
+public class Stream14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		 Convert List of Strings to Uppercase
+		List<String> names = Arrays.asList("ali","ahmed","ajaz");
+		
+		List<String> uperName = names.stream().map(n -> n.toUpperCase()).collect(Collectors.toList());
+		
+		System.out.println(uperName);
+		
+		
+		
+		
+		
+
+		//find even number from list 
+		List<Integer> numbers = Arrays.asList(10, 15, 20, 25, 30);
+		
+
+		List<Integer> num2=numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+		
+		System.out.println(num2);
+		
+		
+		
+		
+//		List<String> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+		 List<String> cars = Arrays.asList("Volvo", "BMW", "Ford", "Mazda");
+
+		
+		Optional<String> get=cars.stream().filter(n -> n.startsWith("F")).findFirst();
+		
+		
+		System.out.println(get);
+		
+		
+//		Count Elements Greater Than 50
+		
+		List<Integer> numbers2 = Arrays.asList(40, 55, 60, 20, 75);
+		
+		List<Integer> get2 = numbers2.stream().filter(n -> n>50).collect(Collectors.toList());
+		
+		
+		System.out.println(get2);
+		
+		
+		
+		
+//		Exercise 5: Sort a List in Ascending Order
+		
+		List<Integer> num3 = Arrays.asList(5, 2, 8, 1, 3);
+
+		List<Integer> get3 = num3.stream().sorted( Collections.reverseOrder()).collect(Collectors.toList());
+		
+		System.out.println(get3);
+		
+	}
+}

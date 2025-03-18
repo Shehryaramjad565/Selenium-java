@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class frameTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://jqueryui.com/droppable/");
+        driver.switchTo().frame( driver.findElement(By.className("demo-frame")));
+        
+        Actions a= new Actions(driver);
+        WebElement dragable= driver.findElement(By.xpath("//div[@id='draggable']/p"));
+        WebElement dragto = driver.findElement(By.xpath("//div[@id='droppable']/p"));
+        a.dragAndDrop(dragable, dragto);
+       
+
+	}
+
+}

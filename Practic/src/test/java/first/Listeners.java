@@ -1,0 +1,40 @@
+//package first;
+//
+//import org.testng.ITestListener;
+//
+//public class Listeners implements ITestListener {
+//	
+//}
+
+
+package first;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+//ITestListener interface which implements Testng listeners
+public class Listeners implements ITestListener {
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        // TODO Auto-generated method stub
+    	System.out.println("test is sussusful");
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        // TODO Auto-generated method stub
+    	System.out.println("the test that fail name is " + result.getName());
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        // TODO Auto-generated method stub
+    }
+}

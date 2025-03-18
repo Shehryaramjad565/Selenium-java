@@ -1,0 +1,24 @@
+package SecondPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
+public class SelenniumLatest15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        
+        driver.get("https://rahulshettyacademy.com/angularpractice/");
+        
+        WebElement email = driver.findElement(By.cssSelector(".form-control.ng-dirty.ng-valid.ng-touched"));
+//        driver.findElement(with(By.tagName("input").below(email)).sendkeys("dsd@gmail.com"));
+        WebElement inputField = driver.findElement(with(By.tagName("input")).below(email));
+        inputField.sendKeys("akd@gmail.com");
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package first;
+
+import org.testng.annotations.Test;
+
+public class fisttest {
+	@Test(priority=1)
+	public void first() {
+		System.out.println("First test1");
+	}
+	
+	@Test(priority=3)
+	public void first1() {
+		System.out.println("First test 3");
+	}
+	
+	@Test(priority=2)
+	public void first2() {
+		System.out.println("First test 2");
+	}
+	
+}

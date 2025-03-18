@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-16T12:09:55 PKT" name="Default suite" finished-at="2025-03-16T12:10:32 PKT" duration-ms="37720">
+    <groups>
+      <group name="negativeTesting">
+        <method signature="LoginValidation.LoginValidationMethod()[pri:0, instance:shehryarwork.SeleniumFramework.LoginValidation@40005471]" name="LoginValidationMethod" class="shehryarwork.SeleniumFramework.LoginValidation"/>
+      </group> <!-- negativeTesting -->
+    </groups>
+    <test started-at="2025-03-16T12:09:55 PKT" name="Default test" finished-at="2025-03-16T12:10:32 PKT" duration-ms="37720">
+      <class name="shehryarwork.SeleniumFramework.LoginValidation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:shehryarwork.SeleniumFramework.LoginValidation@40005471]" started-at="2025-03-16T12:09:55 PKT" name="launchApplication" finished-at="2025-03-16T12:10:07 PKT" duration-ms="12656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginValidationMethod()[pri:0, instance:shehryarwork.SeleniumFramework.LoginValidation@40005471]" started-at="2025-03-16T12:10:07 PKT" name="LoginValidationMethod" finished-at="2025-03-16T12:10:31 PKT" duration-ms="23174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginValidationMethod -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:shehryarwork.SeleniumFramework.LoginValidation@40005471]" started-at="2025-03-16T12:10:31 PKT" name="closeBrowser" finished-at="2025-03-16T12:10:32 PKT" duration-ms="1826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shehryarwork.SeleniumFramework.LoginValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

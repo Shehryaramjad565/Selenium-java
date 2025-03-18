@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+	<listener class-name="first.Listeners"></listener>
+</listeners>
+
+	<parameter name="URL" value="google.com"></parameter>
+  <test thread-count="5" name="Test">
+  <parameter name="URL" value="google.com"></parameter>
+    <classes>
+      <class name="TestNGPractic.Practic.AppTest"/>
+      <class name="first.second"/>
+      <class name="first.NewTest"/>
+      <class name="first.fisttest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="car loan">
+  	<classes>
+	  	<class name="first.fisttest">
+		  	<methods>
+		  		<exclude name="first2"></exclude>
+		  	</methods>
+	  	</class>
+  	
+  	</classes>
+  
+  </test>
+</suite> <!-- Suite -->

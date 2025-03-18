@@ -1,0 +1,51 @@
+package SecondPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ChildToParent {
+	WebDriver driver;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        // Open the webpage
+        driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        
+        // trivel from parent to child and then other child
+        
+        driver.findElement(By.xpath("//input[@id='inputUsername']/parent::form/input[@name='inputPassword']"));
+        
+        //travling sibling elements
+        
+        
+        driver.findElement(By.xpath("//input[@id='inputUsername']/following-sibling::input[@name='inputPassword']")).sendKeys("enter");
+        
+        //write reguler expression
+        
+        driver.findElement(By.cssSelector("input[id*='chkboxO']")).click();
+        
+        
+        //get the forgot password and then login
+        
+        driver.findElement(By.xpath("//input[@id='inputUsername']")).sendKeys("ali");
+        
+//        driver.findElement(By.xpath("//input[@name='inputPassword']")).sendKeys("enter");
+        
+       
+  
+	}
+
+	
+	 public void getPassword() throws InterruptedException {
+     	driver.findElement(By.xpath("//a[text()='Forgot your password?']")).click();
+     	Thread.sleep(2000);
+     	driver.findElement(By.className("reset-pwd-btn"));
+     	Thread.sleep(2000);
+     	String getText=driver.findElement(By.className("infoMsg")).getText();
+     	System.out.println(getText.split("'"));
+     }
+}

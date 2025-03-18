@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="17" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-14T11:15:24 PKT" name="Suite" finished-at="2025-03-14T11:15:24 PKT" duration-ms="283">
+    <groups>
+      <group name="Smoke">
+        <method signature="fisttest.first1()[pri:3, instance:first.fisttest@202b0582]" name="first1" class="first.fisttest"/>
+        <method signature="NewTest.f()[pri:0, instance:first.NewTest@54422e18]" name="f" class="first.NewTest"/>
+        <method signature="fisttest.testgroup()[pri:0, instance:first.fisttest@202b0582]" name="testgroup" class="first.fisttest"/>
+        <method signature="fisttest.first1()[pri:3, instance:first.fisttest@402c4085]" name="first1" class="first.fisttest"/>
+        <method signature="fisttest.testgroup()[pri:0, instance:first.fisttest@402c4085]" name="testgroup" class="first.fisttest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2025-03-14T11:15:24 PKT" name="car loan" finished-at="2025-03-14T11:15:24 PKT" duration-ms="162">
+      <class name="first.fisttest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="beforeclass" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="testgroup()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="testgroup" finished-at="2025-03-14T11:15:24 PKT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testgroup -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="first(java.lang.String)[pri:1, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="first" finished-at="2025-03-14T11:15:24 PKT" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[google.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first -->
+        <test-method signature="dependentOnMethod()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="dependentOnMethod" finished-at="2025-03-14T11:15:24 PKT" depends-on-methods="first.fisttest.first" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dependentOnMethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="first1()[pri:3, instance:first.fisttest@402c4085]" started-at="2025-03-14T11:15:24 PKT" name="first1" finished-at="2025-03-14T11:15:24 PKT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first1 -->
+      </class> <!-- first.fisttest -->
+    </test> <!-- car loan -->
+    <test started-at="2025-03-14T11:15:24 PKT" name="Test" finished-at="2025-03-14T11:15:24 PKT" duration-ms="283">
+      <class name="first.NewTest">
+        <test-method signature="f()[pri:0, instance:first.NewTest@54422e18]" started-at="2025-03-14T11:15:24 PKT" name="f" finished-at="2025-03-14T11:15:24 PKT" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- first.NewTest -->
+      <class name="first.fisttest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforeclass" finished-at="2025-03-14T11:15:24 PKT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="testgroup()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="testgroup" finished-at="2025-03-14T11:15:24 PKT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testgroup -->
+        <test-method signature="first(java.lang.String)[pri:1, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="first" finished-at="2025-03-14T11:15:24 PKT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[google.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="dependentOnMethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="dependentOnMethod" finished-at="2025-03-14T11:15:24 PKT" depends-on-methods="first.fisttest.first" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dependentOnMethod -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="first2()[pri:2, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="first2" finished-at="2025-03-14T11:15:24 PKT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first2 -->
+        <test-method is-config="true" signature="beforemethod()[pri:0, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="beforemethod" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method signature="first1()[pri:3, instance:first.fisttest@202b0582]" started-at="2025-03-14T11:15:24 PKT" name="first1" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- first1 -->
+      </class> <!-- first.fisttest -->
+      <class name="first.second">
+        <test-method is-config="true" signature="before()[pri:0, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="before" finished-at="2025-03-14T11:15:24 PKT" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="setdata(java.lang.String,java.lang.String)[pri:0, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="setdata" data-provider="getData" finished-at="2025-03-14T11:15:24 PKT" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firstusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firstpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setdata -->
+        <test-method signature="setdata(java.lang.String,java.lang.String)[pri:0, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="setdata" data-provider="getData" finished-at="2025-03-14T11:15:24 PKT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[second username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secondpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setdata -->
+        <test-method signature="setdata(java.lang.String,java.lang.String)[pri:0, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="setdata" data-provider="getData" finished-at="2025-03-14T11:15:24 PKT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[third username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[third dpassword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setdata -->
+        <test-method signature="secondM()[pri:2, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="secondM" finished-at="2025-03-14T11:15:24 PKT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- secondM -->
+        <test-method is-config="true" signature="after()[pri:0, instance:first.second@76b1e9b8]" started-at="2025-03-14T11:15:24 PKT" name="after" finished-at="2025-03-14T11:15:24 PKT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- first.second -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

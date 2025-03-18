@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+	<listener class-name="shehryarwork.BaseTest.Listeners"/>
+</listeners>
+  <test  name="E2ETesting in e-commerce site">
+    <classes>
+      <class name="shehryarwork.SeleniumFramework.LoginValidation"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test  name="invalid credintions to login ">
+    <classes>
+	<class name="shehryarwork.SeleniumFramework.E2ETesting"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
+
+
+

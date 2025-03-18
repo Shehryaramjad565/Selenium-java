@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<groups>
+<run>
+	<include name="Purchases" />
+</run>
+</groups>
+
+  <test  name="Purchases">
+    <classes>
+      <class name="shehryarwork.SeleniumFramework.ProductAddToCart"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Suite -->
+
+
+

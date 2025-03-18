@@ -1,0 +1,102 @@
+
+
+//public class Retry {
+//
+//}
+
+
+//package shehryarwork.BaseTest;
+//
+//import org.testng.IRetryAnalyzer;
+//import org.testng.ITestResult;
+//
+//public class Retry implements IRetryAnalyzer {
+//
+//	int count = 0;
+//	int maxTry = 1;
+//	
+//	@Override
+//	public boolean retry(ITestResult result) {
+//		// TODO Auto-generated method stub
+//		if(count<maxTry)
+//		{
+//			count++;
+//			return true;
+//		}
+//		return false;
+//	}
+//
+//	
+//	
+//}
+
+
+
+
+
+
+
+
+
+
+
+package SecondPractice;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
+import java.io.File;
+import java.util.Iterator;
+import java.util.Set;
+
+public class SelenniumLatest15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        
+        driver.get("https://rahulshettyacademy.com/angularpractice/");
+        
+        WebElement email = driver.findElement(By.cssSelector("[name='email']"));
+//        driver.findElement(with(By.tagName("input").below(email)).sendkeys("dsd@gmail.com"));
+        WebElement inputField = driver.findElement(with(By.tagName("input")).below(email));
+//        inputField.sendKeys("akd@gmail.com");
+        
+        
+        
+        
+        
+        // multiples windlow handling
+        
+        driver.switchTo().newWindow(WindowType.TAB);
+        
+        Set<String> handles = driver.getWindowHandles();
+        
+        Iterator<String> it = handles.iterator();
+        String parent = it.next();
+        String child = it.next();
+        driver.get("https://rahulshettyacademy.com/documents-request");
+        driver.switchTo().window(child);
+        String store = driver.findElement(By.cssSelector("a[href='mailto:mentor@rahulshettyacademy.com']")).getText();
+        driver.switchTo().window(parent);
+        driver.findElement(with(By.tagName("input")).below(email)).sendKeys(store);
+        
+        
+        
+        
+        //taking screenshot
+        File file=driver.getScreenshotAs(OutputType.FILE);
+
+        FileUtils.copyFile(file, new File("logo.png"));
+        
+        
+        
+	}
+}
+

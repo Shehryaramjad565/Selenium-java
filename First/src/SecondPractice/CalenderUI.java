@@ -1,0 +1,97 @@
+package SecondPractice;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CalenderUI {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+        
+        driver.findElement(By.id("ctl00_mainContent_view_date1")).click();
+//        List<WebElement> allYears=driver.findElements(By.className("ui-datepicker-year"));
+        
+        
+        
+        while (true) {
+            // Refresh the list of years after each iteration
+            List<WebElement> allYears = driver.findElements(By.className("ui-datepicker-year"));
+            List<WebElement> allmonths= driver.findElements(By.className("ui-datepicker-month"));
+            List<WebElement> alldays = driver.findElements(By.className("ui-state-default"));
+            boolean found = false; // Declare outside of loop
+
+            for (WebElement year : allYears) {
+                if (year.getText().equals("2020")) {
+                	
+                	for(WebElement month: allmonths) {
+                		if (month.getText().equals("April")) {
+                			
+                			for(WebElement day: alldays) {
+                				if (day.getText().equals("18")) {
+                					day.click();
+                					found = true;
+                					break;
+                				}
+                			}
+                			break;
+                		}
+                			
+                	}
+                    
+                    break;  // Exit for loop if 2020 is found
+                    
+                    
+                }
+            }
+            
+            if (found) {
+                break; // Exit while loop when 2020 is found
+            }
+
+            // Click next button to go to the next set of years
+            driver.findElement(By.cssSelector(".ui-datepicker-next.ui-corner-all")).click();
+
+            Thread.sleep(1000); // Small delay to allow UI update
+        }
+
+        
+//        while(true) {
+//        for (WebElement year : allYears) {
+//        	boolean found=false;
+//            if (year.getText().equals("2020")) {
+//                found = true;
+//                break;
+//            }
+//            else {
+//            	driver.findElement(By.cssSelector(".ui-datepicker-next.ui-corner-all")).click();
+//            }
+//            break;
+//        }
+//        }
+        
+//        System.out.println(allYears);
+//        Thread.sleep(2000);
+//        while(!allYears.contains("2020")) {
+//        	if (!allYears.contains("2020")) {
+//            	driver.findElement(By.cssSelector(".ui-datepicker-next.ui-corner-all")).click();
+//            }
+//        	
+//        	
+//        }
+        
+          //year
+        
+        
+
+	}
+
+}

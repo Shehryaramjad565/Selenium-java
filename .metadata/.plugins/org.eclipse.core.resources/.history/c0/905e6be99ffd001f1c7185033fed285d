@@ -1,0 +1,20 @@
+package SecondPractice;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Stream14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		 Convert List of Strings to Uppercase
+		List<String> names = Arrays.asList("ali","ahmed","ajaz");
+		
+		List<String> uperName = names.stream().map(n -> n.toUpperCase()).collect(Collectors.toList());
+		
+		System.out.println(uperName);
+	}
+
+}

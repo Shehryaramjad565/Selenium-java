@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="shehryarwork.BaseTest.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="invalid credintions to login (failed)" verbose="0">
+    <classes>
+      <class name="shehryarwork.SeleniumFramework.E2ETesting">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchApplication"/>
+          <include name="mainTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- shehryarwork.SeleniumFramework.E2ETesting -->
+    </classes>
+  </test> <!-- invalid credintions to login (failed) -->
+</suite> <!-- Failed suite [Suite] -->

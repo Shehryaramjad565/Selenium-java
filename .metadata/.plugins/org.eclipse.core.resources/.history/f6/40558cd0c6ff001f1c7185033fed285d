@@ -1,0 +1,10 @@
+package first;
+
+import org.testng.annotations.Test;
+
+public class fisttest {
+	@Test(priority=1)
+	public void first() {
+		System.out.println("First test");
+	}
+}

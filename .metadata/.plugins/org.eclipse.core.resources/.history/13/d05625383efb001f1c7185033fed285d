@@ -1,0 +1,29 @@
+package SecondPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ChildToParent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        // Open the webpage
+        driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        
+        // trivel from parent to child and then other child
+        
+        driver.findElement(By.xpath("//input[@id='inputUsername']/parent::form/input[@name='inputPassword']"));
+        
+        //travling sibling elements
+        
+        
+        driver.findElement(By.xpath("//input[@id='inputUsername']/following-sibling::input[@name='inputPassword']")).sendKeys("enter");
+
+	}
+
+}

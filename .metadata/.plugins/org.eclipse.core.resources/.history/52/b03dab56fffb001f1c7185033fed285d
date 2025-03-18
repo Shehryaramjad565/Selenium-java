@@ -1,0 +1,43 @@
+package SecondPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+public class ElementDisable7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        
+        driver.get("http://spicejet.com"); //URL in the browser
+        Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+        //Assert.assertFalse(true); System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDis
+        driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
+
+        System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+        Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+
+        //.ui-state-default.ui-state-highlight.ui-state-active
+
+        System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled());
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+
+        if(driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
+        {
+            System.out.println("its enabled");
+            Assert.assertTrue(true);
+        }
+        else
+        {
+            Assert.assertTrue(false);
+        }
+        
+	}
+
+}

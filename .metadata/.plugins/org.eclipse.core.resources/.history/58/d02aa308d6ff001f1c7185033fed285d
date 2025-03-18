@@ -1,0 +1,13 @@
+package first;
+
+import org.testng.annotations.Test;
+
+public class second {
+	@Test(priority=2)
+	public void secondM() {
+		// TODO Auto-generated method stub
+		System.out.println("second test");
+
+	}
+
+}

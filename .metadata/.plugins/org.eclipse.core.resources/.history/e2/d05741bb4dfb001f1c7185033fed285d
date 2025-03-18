@@ -1,0 +1,36 @@
+package SecondPractice;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AutoSuggestDropdown9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+
+        // Open the webpage
+        driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+        
+        WebElement search=driver.findElement(By.id("autosuggest"));
+        search.sendKeys("pak");
+        List<WebElement> elements=driver.findElements(By.className("ui-corner-all"));
+//        driver.find
+        
+        for (WebElement element:elements) {
+        	if (element.getText().contains("Pakistan")){
+        		element.click();
+        		break;
+        	}
+        }
+        
+        
+
+	}
+
+}

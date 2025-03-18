@@ -1,0 +1,66 @@
+package SecondPractice;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+import java.time.Duration;
+import java.util.function.Function;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.FluentWait;
+
+public class WaitInSelenium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Public/chromedriver-win64/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+        
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        
+        
+        
+        
+        
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+        
+        driver.findElement(By.cssSelector("button")).click();
+        
+//        System.out.println(driver.findElement(By.cssSelector("#finish h4")).getText());
+        
+//          WebElement text = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish h4")));
+//          System.out.println(text.getText());
+        
+        
+//        fluent wait
+        
+        Wait<ChromeDriver> wait1 = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(20)) // Total timeout of 20 seconds
+                .pollingEvery(Duration.ofSeconds(5)) // Poll every 5 seconds
+                .ignoring(NoSuchElementException.class);
+
+            WebElement foo = wait1.until(new Function<WebDriver, WebElement>() {
+                public WebElement apply(WebDriver driver) {
+                    return driver.findElement(By.cssSelector("#finish h4"));
+                }
+            });
+            
+            System.out.println(foo);
+        
+        
+		
+	}
+
+}

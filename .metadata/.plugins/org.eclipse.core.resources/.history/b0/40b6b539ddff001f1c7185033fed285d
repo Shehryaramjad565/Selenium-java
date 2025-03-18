@@ -1,0 +1,38 @@
+package first;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class fisttest {
+	@Test(priority=1)
+	public void first() {
+		System.out.println("First test1");
+	}
+	
+	@Test(priority=3)
+	public void first1() {
+		System.out.println("First test 3");
+	}
+	
+	@Test(priority=2)
+	public void first2() {
+		System.out.println("First test 2");
+	}
+	
+	
+	@BeforeMethod
+	public void beforemethod() {
+		// TODO Auto-generated method stub
+		System.out.println("its run before each method in of this file");
+
+	}
+	
+	@BeforeClass
+	public void beforeclass() {
+		// TODO Auto-generated method stub
+		System.out.println("its run before tests in this class");
+
+	}
+	
+}

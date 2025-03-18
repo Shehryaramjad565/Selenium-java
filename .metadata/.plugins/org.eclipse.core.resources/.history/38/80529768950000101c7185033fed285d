@@ -1,0 +1,53 @@
+package first;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class second {
+	@Test(priority=2)
+	public void secondM() {
+		// TODO Auto-generated method stub
+		System.out.println("second test");
+
+	}
+	
+	@BeforeTest
+	public void before() {
+		// TODO Auto-generated method stub
+		System.out.println("before test");
+
+	}
+	@AfterTest
+	public void after() {
+		// TODO Auto-generated method stub
+		System.out.println("after test");
+
+	}
+	
+	
+	
+	//data paramitization by dataprovider
+		@Test(dataProvider="getData")
+		public void setdata(String username, String password) {
+			System.out.println(username);
+			System.out.println(password);
+		}
+		
+		public Object[][] getData(){
+			
+			Object[][] data= new Object[3][2];
+			
+			data[0][0]="firstusername";
+			data[0][1]= "firstpassword";
+			
+			data[1][0]="second username";
+			data[1][1]="secondpassword";
+			
+			data[2][0]="third username";
+			data[2][1]="third dpassword";
+			return data;
+		}
+	
+}
