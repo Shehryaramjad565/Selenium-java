@@ -75,7 +75,7 @@ Iterator<Cell> cv=r.cellIterator();
 while(cv.hasNext())
 {
 Cell c= cv.next();
-if(c.getCellTypeEnum()==CellType.STRING)
+if(c.getCellType()==CellType.STRING)
 {
 
 a.add(c.getStringCellValue());
